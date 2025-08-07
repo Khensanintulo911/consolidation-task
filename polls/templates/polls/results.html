@@ -1,0 +1,28 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="card mx-0 mx-sm-auto">
+    <div class="card-body">
+      <div class="text-center">
+        <i class="far fa-file-alt fa-4x mb-3 text-success"></i>
+        <p><strong>Poll Results</strong></p>
+      </div>
+      <hr />
+      <ul class="list-group">
+        {% for choice in question.choice_set.all %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ choice.choice_text }}
+            <span class="badge bg-success rounded-pill">
+              {{ choice.votes }} vote{{ choice.votes|pluralize }}
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="text-end mt-3">
+        <a href="{% url 'polls:detail' question.id %}" class="btn btn-outline-primary">Vote again?</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

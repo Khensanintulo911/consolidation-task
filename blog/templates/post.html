@@ -1,0 +1,14 @@
+{% extends "header.html" %}
+
+{% block content %}
+  <h3>{{ object.title }}</h3>
+  <h6>on {{ object.date }}</h6>
+
+  <div class="container">
+    {{ object.body|linebreaksbr }}
+  </div>
+  <br><br>
+  <p><em>— {{ object.signature }}</em></p>
+
+  <a href="{% url 'blog_home' %}" class="btn btn-secondary">← Back to Blog</a>
+{% endblock %}
