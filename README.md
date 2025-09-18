@@ -1,40 +1,49 @@
-# Django Poll App – Math Voting Platform
+# Django Math Voting Platform & Blog System
 
-This project is a Django-based web application that allows users to vote on math-related questions and view poll results instantly. It was built as part of the "Introduction to Software Engineering" course.
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## 🎯 Purpose
+A consolidated Django project featuring:
+- Math poll voting system
+- Blog functionality
+- User authentication
+- Sphinx documentation
+- Docker support
 
-The goal of this project is to practice working with Django views, templates, models, and routing. It showcases the full flow of a poll system — from listing questions, capturing votes, and displaying results — using a dynamic backend and responsive frontend.
+## 🌟 Key Features
 
----
+### 🧮 Math Voting Platform
+- View available math poll questions
+- Vote on selected questions
+- Instant results visualization
+- Responsive Bootstrap interface
+- Form validation with friendly errors
 
-## 🚀 Features
+### ✍️ Blog System
+- Create and manage blog posts
+- User authentication system
+- Admin dashboard
+- Database models for content
 
-- View a list of available poll questions
-- Vote on a selected question
-- Get immediate feedback via a results page
-- Friendly error messages for missing input
-- Clean and responsive Bootstrap-based layout
+## 🚀 Getting Started
 
----
+### Prerequisites
+- Python 3.9+
+- Docker (optional)
+- Git
 
-## 🧱 Project Structure
+### 📦 Installation
 
+#### With Virtual Environment
 ```bash
-mysite/
-│
-├── polls/
-│   ├── migrations/
-│   ├── templates/
-│   │   └── polls/
-│   │       ├── base.html        # Shared layout for all templates
-│   │       ├── index.html       # Homepage with question list
-│   │       ├── detail.html      # Question detail + voting form
-│   │       ├── results.html     # Voting results
-│   ├── models.py                # Question & Choice models
-│   ├── views.py                 # Application logic
-│   ├── urls.py                  # App routing
-│
-├── manage.py
-├── db.sqlite3
-└── README.md
+git clone https://github.com/Khensanintulo911/consolidation-task.git
+cd consolidation-task
+
+python -m venv venv
+source venv/bin/activate  # Linux/MacOS
+.\venv\Scripts\activate   # Windows
+
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
